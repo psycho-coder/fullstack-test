@@ -96,3 +96,25 @@
 $ docker-compose exec web php spark migrate
 $ docker-compose exec web php spark db:seed AddPostData
 ```
+
+Создать .env файл и прописать подключение к БД, а также baseUrl
+
+```dotenv
+# /src/.env
+
+# ...
+
+app.baseURL = 'http://localhost'
+
+# ...
+
+database.default.hostname = db
+database.default.database = codeigniter_db
+database.default.username = root
+database.default.password = #pass
+database.default.DBDriver = MySQLi
+database.default.DBPrefix =
+database.default.port = 3306
+
+#...
+```
